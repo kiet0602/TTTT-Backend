@@ -13,6 +13,7 @@ class ProductController {
         return res.status(500).json({ error: err.message });
       } else {
         try {
+          console.log(req.body);
           const name = req.body.name;
           const description = req.body.description;
           const price = parseInt(req.body.price, 10);
